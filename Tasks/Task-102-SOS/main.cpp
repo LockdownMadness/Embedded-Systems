@@ -25,6 +25,14 @@ int main()
         buzz.playTone("C");
         wait_us(WAIT_TIME_MS * 1000);  //500ms
 
+        greenLED = 1;
+        buzz.playTone("D");
+        wait_us(WAIT_TIME_MS * 1000);  //500ms
+
+        greenLED = 1;
+        buzz.playTone("E");
+        wait_us(WAIT_TIME_MS * 1000);  //500ms
+
 
         //Off for 500ms
         greenLED = 0;
