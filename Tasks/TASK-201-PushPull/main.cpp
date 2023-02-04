@@ -6,9 +6,13 @@
 #define TRAF_RED1_PIN PC_2
 
 // Objects
-DigitalOut grn(TRAF_GRN1_PIN);
-DigitalOut yel(TRAF_YEL1_PIN);
+DigitalOut grn(TRAF_GRN1_PIN,1);  // with break point it shows zero values for everything then assigned mask etc
+DigitalOut yel(TRAF_YEL1_PIN,1);  // same as above but with different mask number
 DigitalOut red(TRAF_RED1_PIN,1);
+
+DigitalOut reeeeed(TRAF_RED1_PIN,0);         
+DigitalOut amber(TRAF_YEL1_PIN,0);
+DigitalOut green(TRAF_GRN1_PIN,0);
 
 int main()
 {
@@ -24,3 +28,5 @@ int main()
     }
 }
 
+// not sure about question 5, confirm these are compatible with PUSH_PULL outputs <<<<<<<<<
+// I would say yes due to using the same DigitalOut????
