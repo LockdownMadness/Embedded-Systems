@@ -64,11 +64,6 @@ int main()
                                                                 lcd.printf(" Bin Num:00111");
                                                             };
 
-
-
-            
-
-
             leds = n;
             wait_us(2000000);
         }
