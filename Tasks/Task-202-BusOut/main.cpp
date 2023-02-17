@@ -1,6 +1,10 @@
 #include "mbed.h"
 #include "mbed_wait_api.h"
 #include "uop_msb.h"
+#include <ostream>
+#include <string>
+#include <bitset>
+#include <iostream>
 using namespace uop_msb;
 
 // Hardware Definitions
@@ -31,16 +35,45 @@ int main()
 
         
         volatile int n;
-        for (n=0; n<=31; n = n+1) {
+        volatile float b;    
+        for (n=1; n<=7; n = n+1) {
             printf("n=%d\n", n);
             lcd.cls();
-            //lcd.printf("Binary Number = ",d); // Ask Nick about how to display an INT in the LCD display. I can only see char am i doing something wrong??
-            //At least it works in the console
+            lcd.printf("Real Num: %d\n", n);
+
+                if(n==1){
+                    lcd.locate(1, 0);   //Row 1, Col 0
+                    lcd.printf(" Bin Num:00001");
+                    }else if (n==2){
+                        lcd.locate(1, 0);   //Row 1, Col 0
+                        lcd.printf(" Bin Num:00010");
+                            }else if (n==3){
+                                lcd.locate(1, 0);   //Row 1, Col 0
+                                lcd.printf(" Bin Num:00011");
+                                    }else if (n==4){
+                                        lcd.locate(1, 0);   //Row 1, Col 0
+                                        lcd.printf(" Bin Num:00100");
+                                            }else if (n==5){
+                                                lcd.locate(1, 0);   //Row 1, Col 0
+                                                lcd.printf(" Bin Num:00101");
+                                                    }else if (n==6){
+                                                        lcd.locate(1, 0);   //Row 1, Col 0
+                                                        lcd.printf(" Bin Num:00110");
+                                                            }else if (n==7){
+                                                                lcd.locate(1, 0);   //Row 1, Col 0
+                                                                lcd.printf(" Bin Num:00111");
+                                                            };
+
+
+
+            
+
+
             leds = n;
             wait_us(2000000);
         }
 
-        //ASK FOR HELP IN THIS ONE FOR TASK202 6. ADDING THE THREE PINS PB_0 ETC COULDNT FIND THEM ON THE SCMATIC
+        //ASK FOR HELP IN THIS ONE FOR TASK202 6. ADDING THE THREE PINS PB_7 & PB_14 ETC COULDNT FIND THEM ON THE SCMATIC
     }
 }
 
