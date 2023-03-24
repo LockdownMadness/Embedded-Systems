@@ -13,7 +13,7 @@
 #include "uop_msb.h"
 #include "MbedLight.hpp"
 #include "MbedTimer.hpp"
-MbedLight redLed(LED1);                 //Concrete class
+MbedLight redLed(LED1);                 //Concrete class  //This is for the physical device and set to whatever on the board
 MbedTimer tmr;
 
 ILightNotify& lightObj = redLed;        //Alias
@@ -23,7 +23,7 @@ ITimer& tmrObj = tmr;
 
 #include "MockedLight.hpp"
 #include "MockedTimer.hpp"
-MockedLight redLedMocked("RED LED");    //Concrete class
+MockedLight redLedMocked("RED LED FLASH ");    //Concrete class
 MockedTimer tmr(1000ms);
 
 ILightNotify& lightObj = redLedMocked;  //Alias
