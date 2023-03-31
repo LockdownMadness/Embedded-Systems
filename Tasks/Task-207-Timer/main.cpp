@@ -17,12 +17,14 @@ int main()
 {
     //Time how long it takes to perform a printf
     tmr1.start();
-    printf("Hello World!\n");
+    //printf("Hello World!\n"); //Current time 13 Ms
+    printf("Hello World How Are You?\n"); //Current time 24 Ms amost double the time 
     tmr1.stop();
 
     //Print out how long it took
     unsigned long long dur = tmr1.read_ms();
-    printf("The time taken was %llu milliseconds\n", dur);    
+    printf("The time taken was %llu milliseconds\n", dur);   
+
 
     //Now to use a timer to implement a delay
     tmr1.start();

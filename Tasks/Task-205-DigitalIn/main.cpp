@@ -35,6 +35,23 @@ int main()
             ledRed = 0;
         }
 
+        if (SW4 == 1){
+            ledGrn = 1;
+        } else {
+            ledGrn = 0;
+        }
+
+        if (SW5 == 1){
+            ledGrn = 1;
+            ledRed = 1;
+            ledYel = 1;
+        } else {
+            ledGrn = 0;
+            ledYel = 0;
+            ledRed = 0;
+        }
+            
+
         if (SW3.read() == 1) {
             ledYel = 1;
         } else {
